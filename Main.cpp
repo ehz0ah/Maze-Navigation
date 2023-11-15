@@ -136,8 +136,8 @@ return total/times;
 
 // Function to move the robot forward/straight
 void go_straight(){
-leftMotor.run(-motorSpeed_left - 35); // Negative: wheel turns anti-clockwise -35
-rightMotor.run(motorSpeed_right + 10); // Positive: wheel turns clockwise +35
+leftMotor.run(-motorSpeed_left - 35); // Negative: wheel turns anti-clockwise
+rightMotor.run(motorSpeed_right + 10); // Positive: wheel turns clockwise
 }
 
 
