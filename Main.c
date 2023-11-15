@@ -370,21 +370,21 @@ stop_motors();
 //read the RGB values of the current colour into colourArray
 detect_colour(colourArray);
 //if white, play star wars theme
-if (colourArray[0] > 140 && colourArray[1] > 210 && colourArray[2] > 210){   // [0] > 150
+if (colourArray[0] > 140 && colourArray[1] > 210 && colourArray[2] > 210){  
 play_tune();
 stop_motors();
 delay(100000);
 }
 //if purple, 2 left turns in 2 grids
-else if((colourArray[1] <= 160) && (colourArray[2] > colourArray[1]) && (colourArray[2] > colourArray[0])){   // [1] <= 150
+else if((colourArray[1] <= 160) && (colourArray[2] > colourArray[1]) && (colourArray[2] > colourArray[0])){  
 two_left_turns();
 }
 //if orange, turn 180 degrees in same grid
-else if((colourArray[1] >= 130) && (colourArray[0] > colourArray[1]) && (colourArray[0] > colourArray[2])){  //229 107 91  [1] >= 140
+else if((colourArray[1] >= 130) && (colourArray[0] > colourArray[1]) && (colourArray[0] > colourArray[2])){ 
 u_turn();
 }
 //if red, turn left
-else if((colourArray[1] < 130) && (colourArray[0] > colourArray[1]) && (colourArray[0] > colourArray[2])){  // 223 89 69
+else if((colourArray[1] < 130) && (colourArray[0] > colourArray[1]) && (colourArray[0] > colourArray[2])){ 
 turn_left();
 delay(TURNING_TIME_MS-80);
 }
