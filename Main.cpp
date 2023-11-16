@@ -18,8 +18,8 @@ MeLineFollower lineFinder(PORT_2); // assigning lineFinder to RJ25 port 2
 
 
 // Setting up default motor speeds to 220/255
-uint8_t motorSpeed_left = 220;
-uint8_t motorSpeed_right = 220;
+int motorSpeed_left = 220;
+int motorSpeed_right = 220;
 
 /*
 * Values for colour sensor calibration and measurements are stored as ints
