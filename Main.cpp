@@ -422,7 +422,7 @@ void loop() {
       double_right_turn();
     }
 
-    // If colour detected is not recognise, retry after 50 milliseconds.
+    // If colour detected is not recognised, retry after 50 milliseconds.
     else {
       delay(50);
     }
