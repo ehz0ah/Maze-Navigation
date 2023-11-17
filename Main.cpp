@@ -454,7 +454,7 @@ void loop() {
     int v2 = analogRead(IR_SENSOR);            
     shine_blue();
 
-    // If the difference between the 2nd and 1st voltage reading exceeds 280, the robot is getting too close to the right wall and thus needs to nudge left.
+    // If the difference between the 2nd and 1st voltage reading exceeds 280, the robot is getting too close to the right wall and needs to nudge left.
     if ((v2 - v1) > 280) {    
       nudge_left();
       delay(5);
