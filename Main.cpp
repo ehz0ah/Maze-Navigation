@@ -324,7 +324,7 @@ void detect_colour(int colourArray[]) {
 
   // Taking 10 samples for Blue.
   shine_blue();
-  for(int i = 0; i < 10; i++){
+  for(int i = 0; i < 10; i++) {
     blue_readings[i] = ((float)(analogRead(LDR_SENSOR) - blackArray[2]))/(greyDiff[2])*255;
     Serial.println("Blue readings are:");
     Serial.println(blue_readings[i]);
@@ -355,7 +355,7 @@ void detect_colour(int colourArray[]) {
 
   // Tells us what is the final readings for the colour detected so that we can do the appropriate actions.
   Serial.println("Final Readings");
-  for(int i=0; i<3; i++){
+  for(int i=0; i<3; i++) {
     Serial.println(colourArray[i]);
   }
 }
@@ -396,29 +396,29 @@ void loop() {
     }
 
     // If purple is detected, do a double left turn in 2 grids.
-    else if((colourArray[1] <= 180) && (colourArray[2] > colourArray[1]) && (colourArray[2] > colourArray[0])) {  
+    else if ((colourArray[1] <= 180) && (colourArray[2] > colourArray[1]) && (colourArray[2] > colourArray[0])) {  
       double_left_turn();
     }
 
     // If orange is detected, do a u-turn on the spot.
-    else if((colourArray[1] >= 130) && (colourArray[0] > colourArray[1]) && (colourArray[0] > colourArray[2])) {
+    else if ((colourArray[1] >= 130) && (colourArray[0] > colourArray[1]) && (colourArray[0] > colourArray[2])) {
       u_turn();
     }
 
     // If red is detected, turn left.
-    else if((colourArray[1] < 130) && (colourArray[0] > colourArray[1]) && (colourArray[0] > colourArray[2])) { 
+    else if ((colourArray[1] < 130) && (colourArray[0] > colourArray[1]) && (colourArray[0] > colourArray[2])) { 
       turn_left();
       delay(TURNING_TIME_MS-80);
     }
 
     // If green is detected, turn right.
-    else if((colourArray[1] > colourArray[0]) && (colourArray[1] > colourArray[2])) {
+    else if ((colourArray[1] > colourArray[0]) && (colourArray[1] > colourArray[2])) {
       turn_right();
       delay(TURNING_TIME_MS-100);  
     }
 
     // If blue is detected, do a double right turn in 2 grids
-    else if((colourArray[1] > colourArray[0]) && (colourArray[2] > colourArray[1]) && (colourArray[2] > colourArray[0])) {
+    else if ((colourArray[1] > colourArray[0]) && (colourArray[2] > colourArray[1]) && (colourArray[2] > colourArray[0])) {
       double_right_turn();
     }
 
@@ -468,7 +468,7 @@ void loop() {
     }
 
     // If both sides are at a good distance from the walls, continue moving straight.
-    else{
+    else {
       go_straight();
     }
   }
