@@ -1,5 +1,8 @@
 # mBot Maze Navigation Project
 
+## Project Documentation
+[Detailed Documentation](https://github.com/ehz0ah/Maze-Navigation/blob/main/Project%20Documentation.pdf)
+
 ## Overview
 
 This GitHub repository contains the source code and documentation for a maze navigation project using the mBot educational robot. The project utilizes an ultrasonic sensor, an infrared sensor, and a color sensor to guide the mBot through a maze. The color sensor is specifically designed to detect the color of the paper beneath the mBot at specific checkpoints.
